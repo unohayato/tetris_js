@@ -8,4 +8,9 @@
   - 押したらプレイできるボタン
  - style.css
  - js_folder
-  - 
+  - controller.js
+   - 
+  - render.js
+   - 
+  - tetris.js
+   - 
