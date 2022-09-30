@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+
+}
+
+
+#canvas {
+  width: 400px;
+  height: 600px;
+  display: block;
+  margin: 0 auto;
+  border: 5px solid purple;
+}
+
+#play-button {
+  width: 400px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
+  font-size: 2rem;
+  background-color: palevioletred;
+  cursor: pointer;
+
+
+
+}
+
+p {
+  text-align: center;
+}
