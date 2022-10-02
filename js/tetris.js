@@ -39,6 +39,7 @@ function newShape() {
   for (let y = 0; x < 4; ++y) {
     current[y] = [];
     for (let x = 0; x < 4; ++x) {
+      // この処理は何をしている？
       let i = 4 * y + x;
       if (typeof shape[i] != 'undefined' && shape[i]) {
         current[y][x] = id + 1;
