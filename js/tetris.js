@@ -58,3 +58,14 @@ function newShape() {
 
 
 }
+
+// clear the board
+
+function init() {
+  for (let y = 0; y < ROWS; ++y) {
+    board[y] = [];
+    for (let x =  0; x < COLS; ++x) {
+      board[y][x] = 0;
+    }
+  }
+}
