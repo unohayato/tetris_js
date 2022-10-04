@@ -69,3 +69,23 @@ function init() {
     }
   }
 }
+
+// keep the element moivng down, creating new shapes and clearing lines
+
+function tick() {
+  if (valid(0, 1)) {
+    currentY++;
+  } else   {// if the element settled
+  
+    freezed();
+    valid(0, 1);
+    clearlines();
+    if (lose) {
+      clearAllIntervals();
+      return false;
+
+    }
+    newShape();
+  }
+
+}
