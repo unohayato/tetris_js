@@ -36,5 +36,11 @@
    - init関数
     - ROWSとCOLS分のboardをy,xで回して初期化する（テトリミノのない状態にする）
    - tick関数
-   
+   - valid関数
+    - 
+   - freez関数
+   - clearLines関数
+   - clearAllIntervals関数
+
+
   

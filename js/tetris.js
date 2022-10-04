@@ -89,3 +89,17 @@ function tick() {
   }
 
 }
+
+// check if the resulting position of current shape will be feasible
+
+valid (offsetX, offsetY, newCurrent) {
+
+  offsetX = offsetX || 0;
+  offsetY = offsetY || 0;
+  offsetX = currentX + offsetX;
+  offsetY = currentY + offsetY;
+  newCurrent = newCurrent || current;
+
+  for (let)
+
+}
