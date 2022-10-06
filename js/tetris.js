@@ -75,7 +75,7 @@ function init() {
 function tick() {
   if (valid(0, 1)) {
     currentY++;
-  } else   {// if the element settled
+  } else {// if the element settled
   
     freezed();
     valid(0, 1);
@@ -92,7 +92,7 @@ function tick() {
 
 // check if the resulting position of current shape will be feasible
 
-valid (offsetX, offsetY, newCurrent) {
+function valid (offsetX, offsetY, newCurrent) {
 
   offsetX = offsetX || 0;
   offsetY = offsetY || 0;
@@ -100,6 +100,23 @@ valid (offsetX, offsetY, newCurrent) {
   offsetY = currentY + offsetY;
   newCurrent = newCurrent || current;
 
-  for (let)
-
+  for (let y = 0; y < 4; ++y){
+    for (let x = 0; x < 4; ++x){
+      if(newCurrent[y][x]){
+        if(typeof board[y + offsetY] == 'undefined'
+        || typeof board[y + offsetY][x + offsetX] == 'undefined'
+        || board[y + offsetY][x + offsetX]
+        || x + offsetX < 0
+        || y + offsetY >= ROWS
+        || x + offsetX >= COLS){
+          if(offsetY == 1 && freezed) {
+            lose = true; //lose if the current shape is settled at the most row
+            document.getElementById('playbutton').disabled = false;
+          }
+          return false;
+        }
+      }
+    } 
+  }
+  return true;
 }
