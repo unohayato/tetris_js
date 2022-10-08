@@ -36,7 +36,7 @@ function newShape() {
   let shape = shapes[id]; // maintain id for color filling
 
   current = [];
-  for (let y = 0; x < 4; ++y) {
+  for (let y = 0; y < 4; ++y) {
     current[y] = [];
     for (let x = 0; x < 4; ++x) {
       // この処理は何をしている？
@@ -77,9 +77,9 @@ function tick() {
     currentY++;
   } else {// if the element settled
   
-    freezed();
+    freeze();
     valid(0, 1);
-    clearlines();
+    clearLines();
     if (lose) {
       clearAllIntervals();
       return false;
@@ -218,7 +218,7 @@ function newGame() {
   interval = setInterval(tick, 400);
 }
 
-function clearAllintervals(){
+function clearAllIntervals(){
   clearInterval(interval);
   clearInterval(intervalRender);
 }
