@@ -90,7 +90,7 @@ function tick() {
 
 }
 
-function freez(){
+function freeze(){
   for(let y = 0; y < 4; ++y){
     for(let x = 0; x < 4; ++ x){
       if(current[y][x]){
@@ -100,6 +100,18 @@ function freez(){
     }
   }
   freezed = true;
+}
+
+// return the rotates the routated shape 'current' perpendiculary anticlockwise
+function rotate(current){
+  let newCurrent = [];
+  for (let y = 0; y < 4; ++y){
+    newCurrent[y] = [];
+    for (let x = 0; x < 4; ++x){
+      newCurrent[y][x] = current[3 - x][y];
+    }
+  }
+  return newCurrent;
 }
 
 // check if the resulting position of current shape will be feasible
