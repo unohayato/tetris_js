@@ -126,3 +126,11 @@ function playbuttonClicked(){
   document.getElementById('playbutton').disabled = true;
 }
 
+function newGame() {
+  clearAllIntervals();
+  intervalRender = setInterval(render, 30);
+  init();
+  newShape();
+  lose = false;
+  interval = setInterval(tick, 400);
+}
