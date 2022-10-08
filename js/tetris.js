@@ -120,3 +120,9 @@ function valid (offsetX, offsetY, newCurrent) {
   }
   return true;
 }
+
+function playbuttonClicked(){
+  newGame();
+  document.getElementById('playbutton').disabled = true;
+}
+
