@@ -1,40 +1,19 @@
-* {
-  box-sizing: border-box;
-  overflow: hidden;
-}
 
-body {
-  width: 100vw;
-  height: 100vh;
-  margin: 7rem auto;
-  
-
-}
-
-
-#canvas {
-  width: 400px;
-  height: 600px;
+canvas {
   display: block;
-  margin: 0 auto;
-  border: 5px solid purple;
+  margin: auto;
+  border: 1px solid black;
 }
 
-#play-button {
-  width: 400px;
+#playbutton {
+  width: 100px;
   height: 50px;
   display: block;
-  margin: 0 auto;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 500;
-  font-size: 2rem;
-  background-color: palevioletred;
+  margin: auto;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: white;
   cursor: pointer;
-
-
-
-}
-
-p {
-  text-align: center;
 }
