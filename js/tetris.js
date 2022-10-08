@@ -114,6 +114,29 @@ function rotate(current){
   return newCurrent;
 }
 
+// check if any lines are filled and clear them
+function clearLines(){
+  for(let y = ROWS - 1; y >= 0; --y){
+    let rowFilled = true;
+    for(let x = 0; x < COLS; ++x){
+      if (board[y][x] == 0){
+        rowFilled = false;
+        break;
+      }
+    }
+    if (rowFilled){
+
+      document.getElementById('clearsound').play();
+      for(let yy = y; yy > 0; --yy){
+        for(let x = 0; x < COLS; ++x){
+          board[yy][x] = board[yy - 1][x];
+        }
+      }
+      ++y; 
+    }
+  }
+}
+
 // check if the resulting position of current shape will be feasible
 
 function valid (offsetX, offsetY, newCurrent) {
