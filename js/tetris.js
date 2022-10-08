@@ -134,3 +134,8 @@ function newGame() {
   lose = false;
   interval = setInterval(tick, 400);
 }
+
+function clearAllintervals(){
+  clearInterval(interval);
+  clearInterval(intervalRender);
+}
