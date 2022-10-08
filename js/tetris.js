@@ -204,7 +204,7 @@ function valid (offsetX, offsetY, newCurrent) {
   return true;
 }
 
-function playbuttonClicked(){
+function playButtonClicked(){
   newGame();
   document.getElementById('playbutton').disabled = true;
 }
