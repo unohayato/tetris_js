@@ -90,6 +90,18 @@ function tick() {
 
 }
 
+function freez(){
+  for(let y = 0; y < 4; ++y){
+    for(let x = 0; x < 4; ++ x){
+      if(current[y][x]){
+        board[y + currentY][x + currentX] = current[y][x];
+
+      }
+    }
+  }
+  freezed = true;
+}
+
 // check if the resulting position of current shape will be feasible
 
 function valid (offsetX, offsetY, newCurrent) {
