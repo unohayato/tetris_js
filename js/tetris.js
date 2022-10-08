@@ -137,6 +137,42 @@ function clearLines(){
   }
 }
 
+function keyPress(key){
+  switch(key){
+    case 'left':
+      if(valid(-1)){
+        --currentX;
+      }
+      break;
+
+    case 'right':
+      if(valid(1)){
+        ++currentX;
+      }
+      break;
+
+    case 'down':
+      if(valid(0, 1)){
+        ++currentY;
+      }
+      break;
+
+    case 'rotate':
+      let rotated = rotate(current);
+      if (valid(0, 0, rotated)){
+        current = rotated;
+      }
+      break;
+
+    case 'drop':
+      while (valid(0, 1)){
+        ++currentY;
+      }
+      tick();
+      break;
+  }
+}
+
 // check if the resulting position of current shape will be feasible
 
 function valid (offsetX, offsetY, newCurrent) {
